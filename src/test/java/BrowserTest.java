@@ -4,9 +4,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BrowserTest {
 	
 	public static void main(String[] args) {
+		String projectPath=System.getProperty("user.dir");
+		System.out.println("projectPath: "+projectPath);
+		System.setProperty("webdriver.chrome.driver",projectPath+"\\driver\\googleDriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Codin\\Downloads\\chromedriver\\chromedriver.exe");
 		driver.get("https://mvnrepository.com");
 		
 	}
